@@ -20,13 +20,17 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
+   
+    
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
     user_name = '@' + message.from_user.username if message.from_user.username else None
+    start_msg = f"new user started bot\n�➖➖➖➖➖➖➖➖➖➖\nusername={user_name}\nid = {id}"
     try:
         await add_user(id, user_name)
+        await client.send_message(chat_id=chat_id, text=start_msg)
     except:
         pass
     text = message.text
@@ -111,10 +115,7 @@ async def start_command(client: Client, message: Message):
         return
 @Bot.on_message(filters.command('start') & filters.private)
 async def hello(client, message):
-    id = message.from_user.id
-    uname =  '@' + message.from_user.username
-    start_msg = f"new user started bot\n�➖➖➖➖➖➖➖➖➖➖\nusername={uname}\nid = {id}"
-    await client.send_message(chat_id=chat_id, text=start_msg)
+    ffgffufufy
     
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
