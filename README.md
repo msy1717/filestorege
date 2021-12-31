@@ -44,8 +44,7 @@ I Guess This Will Be Usefull For Many People.....😇.
 ##
 ### Installation
 #### Deploy on Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-  <img src="https://img.shields.io/badge/How%20to-Deploy-red?logo=youtube" width="147">
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/msy1717/filestorege)</br>  <img src="https://img.shields.io/badge/How%20to-Deploy-red?logo=youtube" width="147">
 </a><br>
 **Check This Tutorial Video on YouTube for any Help**<br>
 **Thanks to [Erich](https://t.me/ErichDaniken) and his [InFoTel](https://t.me/InFoTel_Group) for this Video**
