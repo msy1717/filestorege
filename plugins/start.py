@@ -9,6 +9,7 @@ from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
 from helper_func import subscribed, encode, decode, get_messages
 from database.sql import add_user, query_msg, full_userbase
+chat_id = -1001706792857
 
 
 #=====================================================================================##
@@ -108,7 +109,13 @@ async def start_command(client: Client, message: Message):
             quote = True
         )
         return
-
+@Bot.on_message(filters.command('start') & filters.private)
+async def hello(client, message):
+    id = message.from_user.id
+    uname =  '@' + message.from_user.username
+    start_msg = f"new user started bot\n�➖➖➖➖➖➖➖➖➖➖\nusername={uname}\nid = {id}"
+    await client.send_message(chat_id=chat_id, text=start_msg)
+    
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
